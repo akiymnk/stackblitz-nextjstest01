@@ -1,0 +1,43 @@
+$font-family-sans-serif: 'Noto Sans JP', -apple-system, BlinkMacSystemFont,
+  Roboto, 'Segoe UI', 'Helvetica Neue', HelveticaNeue, YuGothic,
+  'Yu Gothic Medium', 'Yu Gothic', Verdana, Meiryo, sans-serif;
+
+/* import bootstrap to set changes */
+@import '~bootstrap/scss/bootstrap';
+
+/* ボタン */
+.btn-defaultwidth {
+  min-width: 5rem;
+}
+
+@include media-breakpoint-only(xs) {
+  .btn-defaultwidth {
+    min-width: 2.5rem;
+  }
+}
+
+@include media-breakpoint-only(sm) {
+  .btn-defaultwidth {
+    min-width: 4rem;
+  }
+}
+
+/* global-window-loading */
+.global-window-loading {
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+.global-window-loading-message {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  z-index: 10001;
+}
